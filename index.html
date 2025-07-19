@@ -2,155 +2,319 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Associate Application Architect - [Your Name]</title>
+    <title>Basavaraj Kalaghatagi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
+            margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #f4f6f8;
-            margin: 0;
-            padding: 0;
             color: #222;
         }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
+        .nav {
             background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            padding: 32px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
         }
-        .header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #2d3a4b;
-        }
-        .header h2 {
-            margin: 8px 0 0 0;
+        .nav .logo {
+            font-weight: bold;
             font-size: 1.2em;
-            color: #4e5d6c;
+            color: #0077b5;
+            letter-spacing: 1px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #2d3a4b;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #0077b5;
+        }
+        .header-bg {
+            background: linear-gradient(120deg, #0077b5 0%, #00c6ff 100%);
+            padding: 64px 0 40px 0;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+            margin-bottom: 16px;
+            background: #fff;
+        }
+        .name {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 0;
+        }
+        .role {
+            font-size: 1.1em;
             font-weight: 400;
+            margin: 8px 0 0 0;
+            letter-spacing: 1px;
+        }
+        .tagline {
+            font-size: 1.1em;
+            margin: 18px 0 0 0;
+            color: #eaf1fb;
         }
         .social-links {
-            margin: 20px 0;
-            text-align: center;
+            margin: 22px 0 0 0;
         }
         .social-link {
             display: inline-block;
-            margin: 0 10px;
-            color: #2d3a4b;
+            margin: 0 12px;
+            color: #fff;
             font-size: 1.7em;
             transition: color 0.2s;
         }
         .social-link:hover {
-            color: #0077b5;
+            color: #ffe082;
+        }
+        .container {
+            max-width: 900px;
+            margin: -60px auto 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 32px 32px 32px;
+            position: relative;
+            z-index: 2;
         }
         .section {
-            margin-bottom: 28px;
+            margin-bottom: 36px;
         }
         .section-title {
             font-size: 1.3em;
             color: #0077b5;
-            margin-bottom: 10px;
+            margin-bottom: 14px;
+            font-weight: 700;
             border-bottom: 1px solid #e0e0e0;
             padding-bottom: 4px;
         }
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .skills-list {
+        .skills-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 18px;
             list-style: none;
             padding: 0;
         }
-        .skills-list li {
+        .skills-grid li {
             background: #eaf1fb;
             color: #2d3a4b;
-            padding: 6px 14px;
+            padding: 8px 18px;
             border-radius: 16px;
             font-size: 1em;
+            font-weight: 500;
         }
-        @media (max-width: 600px) {
-            .container {
-                padding: 12px;
-            }
-            .header h1 {
-                font-size: 1.5em;
-            }
+        .timeline {
+            border-left: 3px solid #eaf1fb;
+            margin-left: 10px;
+            padding-left: 20px;
+        }
+        .timeline-item {
+            margin-bottom: 22px;
+            position: relative;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: #0077b5;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px #eaf1fb;
+        }
+        .timeline-title {
+            font-weight: 600;
+            color: #2d3a4b;
+        }
+        .timeline-company {
+            font-weight: 500;
+            color: #0077b5;
+            font-size: 0.98em;
+        }
+        .timeline-period {
+            font-size: 0.95em;
+            color: #888;
+        }
+        .timeline-desc {
+            margin: 4px 0 0 0;
+            color: #4e5d6c;
+        }
+        .contact-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 12px;
+        }
+        .contact-card {
+            background: #eaf1fb;
+            border-radius: 12px;
+            padding: 18px 24px;
+            flex: 1 1 220px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1.08em;
+        }
+        .contact-card i {
+            color: #0077b5;
+            font-size: 1.3em;
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 1em;
+            margin: 40px 0 20px 0;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 10px; }
+            .header-bg { padding: 32px 0 24px 0; }
+            .profile-pic { width: 90px; height: 90px; }
+            .name { font-size: 1.3em; }
+            .contact-cards { flex-direction: column; gap: 12px; }
+            .nav { flex-direction: column; height: auto; padding: 0 10px; }
+            .nav-links { gap: 12px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>[Your Name]</h1>
-            <h2>Associate Application Architect</h2>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourusername" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/yourprofile" class="social-link" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://yourwebsite.com" class="social-link" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
-            </div>
+    <nav class="nav">
+        <div class="logo">Basavaraj K</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </div>
-        <div class="section">
-            <div class="section-title">About Me</div>
+    </nav>
+    <div class="header-bg">
+        <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
+        <div class="name">Basavaraj Kalaghatagi</div>
+        <div class="role">Associate Architect</div>
+        <div class="tagline">
+            15+ years in web/mobile architecture, Big Data Engineering, GenAI, and full-stack leadership.<br>
+            Technology agnostic, passionate about scalable solutions and team growth.
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/basavaraj-kalaghatagi-29991318/" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/yourprofile" class="social-link" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://yourwebsite.com" class="social-link" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section" id="about">
+            <div class="section-title">About</div>
             <p>
-                Associate Application Architect with 16 years of experience in designing and building scalable, high-performance mobile and backend systems. Passionate about leveraging modern technologies and cloud platforms to deliver impactful solutions. Experienced in leading teams, architecting complex systems, and driving innovation in fast-paced environments.
+                Associate Architect with 15+ years of experience in architecting and delivering scalable web/mobile applications, Big Data solutions, and GenAI integrations. Proven leader in cross-functional teams, technology strategy, and end-to-end solution delivery across multiple domains.
             </p>
         </div>
-        <div class="section">
-            <div class="section-title">Skills</div>
-            <ul class="skills-list">
-                <li>Mobile Architecture (iOS Native, Android Native, Flutter)</li>
-                <li>Backend Development (Python, NodeJS, Swift, Kotlin, Go-Lang)</li>
-                <li>GenAI</li>
-                <li>FastAPI</li>
-                <li>GenAI Frameworks</li>
-                <li>Frappe</li>
-                <li>ERPNext</li>
+        <div class="section" id="skills">
+            <div class="section-title">Skills & Tools</div>
+            <ul class="skills-grid">
+                <li>Web/Mobile Application Architecture</li>
+                <li>iOS/Android Native</li>
+                <li>React Native</li>
+                <li>Flutter</li>
+                <li>Full Stack Development</li>
                 <li>Big Data Engineering</li>
-                <li>Python, PySpark</li>
-                <li>AWS, GCP</li>
-            </ul>
-        </div>
-        <div class="section">
-            <div class="section-title">Experience</div>
-            <ul>
-                <li>16+ years in software development and architecture</li>
-                <li>Worked at multiple companies across diverse domains</li>
-                <li>Architected and delivered mobile and backend solutions at scale</li>
-                <li>Led Big Data engineering projects using Python, PySpark on AWS and GCP</li>
-                <li>Implemented GenAI solutions and integrated with modern frameworks</li>
-            </ul>
-        </div>
-        <div class="section">
-            <div class="section-title">Frameworks & Tools</div>
-            <ul class="skills-list">
+                <li>GenAI & AI Integration</li>
+                <li>Cloud (AWS, GCP, Azure)</li>
+                <li>Microservices</li>
+                <li>CI/CD & DevOps</li>
+                <li>Python</li>
+                <li>NodeJS</li>
                 <li>FastAPI</li>
                 <li>GenAI Frameworks</li>
-                <li>Frappe</li>
-                <li>ERPNext</li>
                 <li>PySpark</li>
-                <li>AWS</li>
-                <li>GCP</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Apache Airflow</li>
+                <li>Apache Beam</li>
+                <li>DataFlow</li>
+                <li>Pub/Sub</li>
+                <li>MongoDB</li>
+                <li>PostgreSQL</li>
+                <li>Redis</li>
+                <li>RedShift</li>
+                <li>BigQuery</li>
+                <li>REST APIs</li>
+                <li>GraphQL</li>
+                <li>Git</li>
             </ul>
         </div>
-        <div class="section">
+        <div class="section" id="experience">
+            <div class="section-title">Professional Experience</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">Associate Architect</div>
+                    <div class="timeline-company">Carvewing Solutions</div>
+                    <div class="timeline-period">Aug 2024 - Present</div>
+                    <div class="timeline-desc">Leading architectural decisions and technical strategy for mobile and software solutions.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Lead Engineer</div>
+                    <div class="timeline-company">Carvewing Solutions</div>
+                    <div class="timeline-period">Mar 2017 - Jul 2024</div>
+                    <div class="timeline-desc">Led development teams and delivered high-quality mobile applications and software solutions.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Tech Lead</div>
+                    <div class="timeline-company">Divum Corporate Services</div>
+                    <div class="timeline-period">Sep 2013 - Feb 2017</div>
+                    <div class="timeline-desc">Led iOS, Android and cross-platform development teams, managing multiple projects and technologies.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Mobile Application Developer</div>
+                    <div class="timeline-company">TechTreeIT Systems Pvt Ltd</div>
+                    <div class="timeline-period">Nov 2010 - Sep 2013</div>
+                    <div class="timeline-desc">Developed 2D & 3D games for iPhone, iPad and Android devices using Unity3D and Corona SDK. Also worked as HTML5 JavaScript game developer.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Software Engineer</div>
+                    <div class="timeline-company">SLM Communications Bangalore</div>
+                    <div class="timeline-period">Nov 2009 - Nov 2010</div>
+                    <div class="timeline-desc">Developed websites and flash-based applications as a software developer.</div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="contact">
             <div class="section-title">Contact</div>
-            <ul>
-                <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-                <li>Location: [Your Location]</li>
-            </ul>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span><a href="mailto:bvk1502@gmail.com">bvk1502@gmail.com</a></span>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bengaluru, Karnataka, India</span>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="footer">
+        Made with ❤️ by Basavaraj Kalaghatagi | &copy; 2024
     </div>
 </body>
 </html>
